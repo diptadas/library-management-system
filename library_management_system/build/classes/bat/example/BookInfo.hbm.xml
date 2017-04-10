@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-Feb-2017 18:35:50 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="bat.example.BookInfo" table="book_info" catalog="library_db">
+        <id name="bookId" type="java.lang.Integer">
+            <column name="book_id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="200" not-null="true" />
+        </property>
+        <property name="edition" type="int">
+            <column name="edition" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="100" not-null="true" />
+        </property>
+        <property name="author" type="string">
+            <column name="author" length="100" not-null="true" />
+        </property>
+        <property name="publisher" type="string">
+            <column name="publisher" length="100" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

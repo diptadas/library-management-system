@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-Feb-2017 18:35:50 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="bat.example.IssueInfo" table="issue_info" catalog="library_db">
+        <id name="issueId" type="java.lang.Integer">
+            <column name="issue_id" />
+            <generator class="identity" />
+        </id>
+        <property name="studentId" type="int">
+            <column name="student_id" not-null="true" />
+        </property>
+        <property name="bookId" type="int">
+            <column name="book_id" not-null="true" />
+        </property>
+        <property name="dateIssue" type="timestamp">
+            <column name="date_issue" length="19" not-null="true" />
+        </property>
+        <property name="dateReturn" type="timestamp">
+            <column name="date_return" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
